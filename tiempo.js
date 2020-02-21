@@ -44,7 +44,7 @@ export default class Tiempo {
     } else if (this.minutos > 59) {
       return "El valor de minutos agregado es incorrecto, ingresa un número del 0 al 59";
     } else {
-      if (this.periodo == "AM") {
+      if (this.periodo == "AM" || this.periodo == "am") {
         return `${this.hora}:${this.minutos} ${this.periodo}`;
       } else {
         return `${this.hora}:${this.minutos} ${this.periodo}`;
@@ -58,7 +58,7 @@ export default class Tiempo {
     } else if (this.minutos > 59) {
       return "El valor de minutos agregado es incorrecto, ingresa un número del 0 al 59";
     } else {
-      if (this.periodo == "AM") {
+      if (this.periodo == "AM" || this.periodo == "am") {
         return `${this.horaFormato24[this.hora]}:${this.minutos}`;
       } else {
         return `${this.horaFormato24[this.hora + 12]}:${this.minutos}`;

@@ -11,6 +11,17 @@ class Main {
     this.hospital = new Hospital("Hospital", "Av. Carranza");
   }
 
+  probarCita() {
+    let x = new Cita(new Fecha(22, 1, 2001), new Tiempo(5, 30, 'PM'), new Doctor(new Nombre("Ernesto", "Gonzalez", "Bocanegra"),
+      "Cirujano",
+      3121145555,
+      28), new Paciente(new Nombre("Edson", "Govea", "Rodríguez"),
+        new Fecha(22, 1, 2001),
+        3121135597));
+
+    console.log(x.getPerfil());
+  }
+
   agregarDoctor() {
     let doctor1 = new Doctor(
       new Nombre("Ernesto", "Gonzalez", "Bocanegra"),
@@ -53,3 +64,4 @@ class Main {
 let app = new Main();
 app.agregarDoctor();
 app.agregarCita();
+app.probarCita();
